@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px 10px #909090;
+  border: solid 4px transparent;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 8887;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: all 1s ease-in-out;
+}
+
+.modal-container .img {
+  background: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+.modal-container p {
+  margin-bottom: 10px;
+}
+
+.modal-container p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-content {
+  overflow-y: auto;
+  width: 100%;
+  max-width: 1000px;
+  position: absolute;
+  top: 50%; /* 中央に配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 1000px;
+  animation: show 0.6s linear 0s;
+  filter: drop-shadow(0px 2px 6px #777);
+}
+
+.modal-container {
+  margin: 0; /* 余白をゼロに設定 */
+}
+
+.modal-top {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+
+}
+
+.modal-close {
+  color: #FF0000;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 8px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  color: #FFF;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
